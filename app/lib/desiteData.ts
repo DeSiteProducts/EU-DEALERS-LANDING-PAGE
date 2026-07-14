@@ -145,6 +145,11 @@ export const products: DesiteProduct[] = [
     detailVariant: "DeSite Grizzly",
     imageAlt: "SLG 78 Grizzly RB screener product photo",
     images: [
+      "/images/78grizzly/SLG78RBFront.webp",
+      "/images/78grizzly/SLG78RBBack.webp",
+      "/images/78grizzly/SLG78RBSide.webp",
+      "/images/78grizzly/SLG78RBDraw1.webp",
+      "/images/78grizzly/SLG78RBDraw2.webp",
       "/images/78grizzly/front.webp",
       "/images/78grizzly/back.webp",
       "/images/78grizzly/side.webp",
@@ -264,7 +269,12 @@ export const products: DesiteProduct[] = [
     detailVariant: "DeSite Grizzly",
     imageAlt: "SLG 56 Mini screener product photo",
     images: [
-     "/images/56/front.webp",
+      "/images/56/SLG56Front.webp",
+      "/images/56/SLG56Back.webp",
+      "/images/56/SLG56Side.webp",
+      "/images/56/SLG56Draw1.webp",
+      "/images/56/SLG56Draw2.webp",
+      "/images/56/front.webp",
       "/images/56/side.webp",
       "/images/56/side2.webp",
       "/images/56/side3.webp",
@@ -319,7 +329,11 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "coming soon"
+      "Soils",
+      "Sand",
+      "Gravels",
+      "Compost",
+      "Erosion Rock",
     ],
     features: [
     "coming soon"
@@ -332,6 +346,11 @@ export const products: DesiteProduct[] = [
     detailVariant: "DeSite Grizzly",
     imageAlt: "SLG 48 Mini screener product photo",
     images: [
+      "/images/48/SLG48Front.webp",
+      "/images/48/SLG48Back.webp",
+      "/images/48/SLG48Side.webp",
+      "/images/48/SLG48Draw1.webp",
+      "/images/48/SLG48Draw2.webp",
       "/images/48/front48.webp",
       "/images/48/side48.webp",
       "/images/48/Suspension48.webp",
@@ -371,7 +390,11 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "coming soon"
+      "Soils",
+      "Sand",
+      "Gravels",
+      "Compost",
+      "Erosion Rock",
     ],
     features: [
     "coming soon"
