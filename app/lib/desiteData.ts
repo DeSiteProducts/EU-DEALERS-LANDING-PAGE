@@ -355,10 +355,10 @@ export const products: DesiteProduct[] = [
       "/images/48/side48.webp",
       "/images/48/Suspension48.webp",
       "/images/48/wheels48.webp",
-      "/images/48/48inAction1.webp",
-      "/images/48/48inAction2.webp",
-      "/images/48/48inAction3.webp",
-      "/images/48/48inAction4.webp",
+      "/images/48/48InAction1.webp",
+      "/images/48/48InAction2.webp",
+      "/images/48/48InAction3.webp",
+      "/images/48/48InAction4.webp",
       
     ],
     proscreenHighlights: [
