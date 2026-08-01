@@ -171,15 +171,15 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "",
+        value: "1021 kg",
       },
       {
         label: "Bucket Width",
-        value: "",
+        value: "Up to 2 meters",
       },
       {
         label: "Feed Height",
-        value: "",
+        value: "2.3 meters",
       },
       {
         label: "Mesh Range",
@@ -209,9 +209,11 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "Dirt",
-      "Gravels",
+      "Wood Mulch",
+      "Decorative Stone",
       "Erosion Rock",
+      "Ground Asphalt",
+      "Crushed Concrete"
     ],
     features: [
     "Self cleaning spring suspension system",
@@ -234,19 +236,19 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "",
+        value: "794 kg",
       },
       {
         label: "Bucket Width",
-        value: "",
+        value: "Up to 2 meters",
       },
       {
         label: "Feed Height",
-        value: "",
+        value: "2.3 meters",
       },
       {
         label: "Mesh Range",
-        value: "",
+        value: "50 mm to 100 mm",
       },
       {
         label: "Warranty",
@@ -291,19 +293,19 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "",
+        value: "400 kg",
       },
       {
         label: "Bucket Width",
-        value: "",
+        value: "Up to 1.6 meters",
       },
       {
         label: "Feed Height",
-        value: "",
+        value: "1.6 meters",
       },
       {
         label: "Mesh Range",
-        value: "",
+        value: "25 mm to 50 mm",
       },
       {
         label: "Warranty",
@@ -364,19 +366,19 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "",
+        value: "315 kg",
       },
       {
         label: "Bucket Width",
-        value: "",
+        value: "Up to 1.4 meters",
       },
       {
         label: "Feed Height",
-        value: "",
+        value: "1.7 meters",
       },
       {
         label: "Mesh Range",
-        value: "",
+        value: "25 mm to 50 mm",
       },
       {
         label: "Warranty",
