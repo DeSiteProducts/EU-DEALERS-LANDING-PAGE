@@ -183,7 +183,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "50 mm to 100 mm",
+        value: "3 mm to 100 mm",
       },
       {
         label: "Warranty",
@@ -248,7 +248,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "50 mm to 100 mm",
+        value: "3 mm to 100 mm",
       },
       {
         label: "Warranty",
