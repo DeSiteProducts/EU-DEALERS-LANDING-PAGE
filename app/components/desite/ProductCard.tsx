@@ -1,4 +1,5 @@
 import type { DesiteProduct } from "../../lib/desiteData";
+import { ProductVideoCarousel } from "../ProductVideoCarousel";
 import { ProductImageCarousel } from "./ProductImageCarousel";
 
 export function ProductCard({
@@ -20,11 +21,8 @@ function ProScreenProductCard({ product }: { product: DesiteProduct }) {
   return (
     <article className="product-card proscreen-card">
       <div className="proscreen-top">
-        <ProductImageCarousel
-          caption={isSixtyEightProScreen ? "220 Volt Single Phase (3600rpm)" : undefined}
-          captionImageNumber={isSixtyEightProScreen ? 5 : undefined}
-          imageAlt={product.imageAlt}
-          images={product.images}
+        <ProductVideoCarousel
+          videos={product.videos ?? []}
           label={product.name}
         />
         <div className="proscreen-summary">
@@ -77,26 +75,13 @@ function ProScreenProductCard({ product }: { product: DesiteProduct }) {
           />
         </div>
 
-        {hasVideos ? (
-          <section className="proscreen-videos" aria-label={`${product.name} videos`}>
-            <h4>Videos</h4>
-            <div className="proscreen-video-grid">
-              {product.videos?.map((video) => (
-                <div className="proscreen-video-frame" key={video.id}>
-                  <iframe
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    src={`https://player.vimeo.com/video/${video.id}`}
-                    title={video.title}
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
-        ) : null}
+       
       </div>
+       <ProductImageCarousel
+        images={product.images ?? []}
+        label={product.name}
+        imageAlt={`${product.name} product image`}
+      />
     </article>
   );
 }

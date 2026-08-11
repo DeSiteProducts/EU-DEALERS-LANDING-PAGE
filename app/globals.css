@@ -1835,3 +1835,267 @@ textarea::placeholder {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* ==========================================
+   VIDEO CAROUSEL
+========================================== */
+
+.product-video-carousel {
+  height: 100%;
+}
+
+.video-carousel-stage {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-carousel-stage iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+/* =========================================
+   PRODUCT IMAGE CAROUSEL
+   ========================================= */
+
+.product-image-carousel {
+  width: 100%;
+}
+
+.product-image-carousel-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+/* =========================================
+   DESKTOP
+   4 IMÁGENES
+   ========================================= */
+
+.product-image-grid-desktop {
+  flex: 1;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.product-image-mobile {
+  display: none;
+}
+
+.product-image-item {
+  min-width: 0;
+  width: 100%;
+}
+
+.product-image-button {
+  display: block;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+  background: transparent;
+
+  cursor: zoom-in;
+}
+
+.product-image-button > * {
+  width: 100%;
+}
+
+
+/* =========================================
+   ARROWS
+   ========================================= */
+
+.product-gallery-arrow {
+  flex: 0 0 40px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TABLET
+   2 IMÁGENES
+   ========================================= */
+
+@media (max-width: 900px) {
+  .product-image-grid-desktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .product-image-carousel-row {
+    gap: 12px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   1 IMAGEN
+   ========================================= */
+
+@media (max-width: 600px) {
+  /*
+   * Ocultamos completamente las 2/4 imágenes
+   * del desktop.
+   */
+  .product-image-grid-desktop {
+    display: none;
+  }
+
+  /*
+   * Mostramos únicamente la imagen activa.
+   */
+  .product-image-mobile {
+    display: block;
+
+    flex: 1;
+    min-width: 0;
+  }
+
+  .product-image-carousel-row {
+    gap: 8px;
+  }
+
+  .product-gallery-arrow {
+    flex: 0 0 35px;
+
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* =========================================
+   FULLSCREEN ZOOM
+   ========================================= */
+
+.image-zoom-overlay {
+  position: fixed !important;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 999999 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  overflow: auto;
+}
+
+
+/* =========================================
+   ZOOM IMAGE
+   ========================================= */
+
+.image-zoom-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-zoom-content img {
+  display: block;
+
+  max-width: 90vw;
+  max-height: 85vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   ========================================= */
+
+.image-zoom-close {
+  position: fixed;
+
+  top: 20px;
+  right: 25px;
+
+  z-index: 1000000;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  color: white;
+
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.image-zoom-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+
+  transform: scale(1.08);
+}
+
+.image-zoom-close:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+.proscreen-card .proscreen-videos-title h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.2;
+  font-weight: 900;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
+}
