@@ -114,6 +114,12 @@ function getModelName(
       sub: "Grizzly RB",
     };
   }
+  if (product.name.includes(" With Riser Box")) {
+    return {
+      main: product.name.replace(" With Riser Box", ""),
+      sub: "With Riser Box",
+    };
+  }
 
   return {
     main: product.name,

@@ -140,7 +140,7 @@ export const products: DesiteProduct[] = [
 
   },
    {
-    name: "SLG 78 Grizzly RB",
+    name: "SLG 78 With Riser Box",
     description: ["DeSite’s spring suspension grizzly makes it the best compact grizzly screener on the market. Designed for compact equipment the screen deck feed height is under 2.4 meters "," The 78 Grizzly with riser box weighs in at 750kg and comes with fork pockets built into the screeners structure for easy onsite transport. "," Backed by our 5 Year Structure Warranty you can count on the SLG 78 Grizzly to be rugged built equipment."],
     detailVariant: "DeSite Grizzly",
     imageAlt: "SLG 78 Grizzly RB screener product photo",
