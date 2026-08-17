@@ -85,7 +85,7 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "725 kg",
+        value: "700 kg",
       },
       {
         label: "Bucket Width",
@@ -123,17 +123,20 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "Soils",
-      "Sand",
-      "Gravels",
-      "Compost",
-      "Erosion Rock",
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
     ],
     features: [
-    "45 To 25 Degree Tilting Screen Deck",
-    "Coil Over Spring Suspension System",
-    "Bucket And Fork Transport Pockets",
-    "Hot Dip Zinc Coating Finish",
+    "Screen and Recycle 10 to 15 cubic meters each hour",
+    "Vibratory screening using 220 Volt single phase.",
+    "Screen mesh sizes from 3mm to 100mm",
+    "Fork Pockets for easy onsite transport",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 700kg"
   ],
   SuggestedRetailPrice: "5,300",
   CostforStockingDealers: "3,700",
@@ -171,7 +174,7 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "1021 kg",
+        value: "725 kg",
       },
       {
         label: "Bucket Width",
@@ -183,7 +186,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "3 mm to 100 mm",
+        value: "40 mm to 100 mm",
       },
       {
         label: "Warranty",
@@ -216,11 +219,13 @@ export const products: DesiteProduct[] = [
       "Crushed Concrete"
     ],
     features: [
-    "Self cleaning spring suspension system",
-    "Quick disconnect riser box",
-    "4 inch nylon tiedown straps",
-    "Side tensioning mesh system",
-    "Available mesh sizes 50, 75, and 100mm",
+    "Screen and Recycle 15 to 30 cubic meters each hour",
+    "Self Cleaning Spring Suspension System",
+    "Screen mesh sizes from 40mm to 100mm",
+    "Fork Pockets for easy onsite transport",
+    "Quick disconnect riser box design",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 725kg"
   ],
   SuggestedRetailPrice: "5,700",
   CostforStockingDealers: "4,000",
@@ -236,7 +241,7 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "794 kg",
+        value: "500 kg",
       },
       {
         label: "Bucket Width",
@@ -248,7 +253,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "3 mm to 100 mm",
+        value: "40 mm to 100 mm",
       },
       {
         label: "Warranty",
@@ -261,7 +266,12 @@ export const products: DesiteProduct[] = [
       "coming soon"
     ],
     features: [
-    "coming soon"
+    "Screen and Recycle 10 to 20 cubic meters each hour",
+    "Self Cleaning Spring Suspension System",
+    "Screen mesh sizes from 40mm to 100mm",
+    "Fork Pockets for easy onsite transport",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 500kg"
   ],
  
   },
@@ -293,7 +303,7 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "400 kg",
+        value: "350 kg",
       },
       {
         label: "Bucket Width",
@@ -305,7 +315,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "25 mm to 50 mm",
+        value: "3 mm to 100 mm",
       },
       {
         label: "Warranty",
@@ -338,7 +348,12 @@ export const products: DesiteProduct[] = [
       "Erosion Rock",
     ],
     features: [
-    "coming soon"
+    "Screen and Recycle 5 to 10 cubic meters each hour",
+    "Self Cleaning Spring Suspension System", 
+    "Screen mesh sizes from 3mm to 100mm",
+    "Towable, with removable hitch tube",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 350kg"
   ],
 
   },
@@ -366,7 +381,7 @@ export const products: DesiteProduct[] = [
     proscreenHighlights: [
       {
         label: "Weight",
-        value: "315 kg",
+        value: "350 kg",
       },
       {
         label: "Bucket Width",
@@ -378,7 +393,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Mesh Range",
-        value: "25 mm to 50 mm",
+        value: "3 mm to 100 mm",
       },
       {
         label: "Warranty",

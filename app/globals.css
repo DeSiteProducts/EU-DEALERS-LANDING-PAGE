@@ -792,7 +792,9 @@ textarea:focus-visible {
   font-size: clamp(1.12rem, 1.55vw, 1.32rem);
   font-weight: 900;
   line-height: 1.24;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .proscreen-card .proscreen-highlights div {
@@ -2099,3 +2101,5 @@ textarea::placeholder {
   font-weight: 900;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
 }
+
+
