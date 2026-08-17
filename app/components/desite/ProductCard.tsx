@@ -21,10 +21,38 @@ function ProScreenProductCard({ product }: { product: DesiteProduct }) {
   return (
     <article className="product-card proscreen-card">
       <div className="proscreen-top">
-        <ProductVideoCarousel
-          videos={product.videos ?? []}
-          label={product.name}
-        />
+       {/* video column */}
+    <div className="proscreen-video-column">
+      <ProductVideoCarousel
+        videos={product.videos ?? []}
+        label={product.name}
+      />
+
+      {/* PRECIOS JUSTO DEBAJO DEL VIDEO */}
+      <div className="proscreen-prices">
+        {product.SuggestedRetailPrice && (
+          <>
+            <p className="price-label">
+              <strong>Suggested Retail Price</strong>
+            </p>
+            <span className="price price-retail">
+              {product.SuggestedRetailPrice} <small>Euros</small>
+            </span>
+          </>
+        )}
+
+        {product.CostforStockingDealers && (
+          <>
+            <p className="price-label">
+              <strong>Cost for Stocking Dealers</strong>
+            </p>
+            <span className="price price-dealer">
+              {product.CostforStockingDealers} <small>Euros</small>
+            </span>
+          </>
+        )}
+      </div>
+    </div>
         <div className="proscreen-summary">
           <div className="proscreen-header">
             {detailVariantLabel ? <h3>{detailVariantLabel}</h3> : null}
@@ -43,22 +71,7 @@ function ProScreenProductCard({ product }: { product: DesiteProduct }) {
             >
               <ProductHighlights highlights={product.proscreenHighlights ?? []} />
             </section>
-            {product.SuggestedRetailPrice && (
-              <>
-              <p className="price-label">
-                <strong>Suggested Retail Price</strong> 
-              </p>
-              <span className="price price-retail">{product.SuggestedRetailPrice} <small>Euros</small></span>
-              </>
-            )}
-            {product.CostforStockingDealers && (
-               <>
-              <p className="price-label">
-                <strong>Cost for Stocking Dealers</strong> 
-              </p>
-              <span className="price price-dealer">{product.CostforStockingDealers} <small>Euros</small></span>
-              </>
-            )}
+            
           </div>
         </div>
       </div>
@@ -134,12 +147,31 @@ function ProductHighlights({
 }) {
   return (
     <dl className="proscreen-highlights">
-      {highlights.map((item) => (
-        <div key={item.label}>
-          <dt>{item.label}</dt>
-          <dd>{item.value || "—"}</dd>
-        </div>
-      ))}
+      {highlights.map((item) => {
+        const value = item.value || "—";
+        const parts = value.split(/(\bto\b)/i);
+
+        return (
+          <div key={item.label}>
+            <dt>{item.label}</dt>
+
+            <dd>
+              {parts.map((part, index) => {
+                if (/^to$/i.test(part)) {
+                  return (
+                    <span key={index}>
+                      {part}
+                      <br />
+                    </span>
+                  );
+                }
+
+                return <span key={index}>{part}</span>;
+              })}
+            </dd>
+          </div>
+        );
+      })}
     </dl>
   );
 }

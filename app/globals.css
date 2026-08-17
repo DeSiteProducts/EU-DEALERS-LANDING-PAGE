@@ -1844,22 +1844,42 @@ textarea::placeholder {
 ========================================== */
 
 .product-video-carousel {
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .video-carousel-stage {
   width: 100%;
-  min-height: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 .video-carousel-stage iframe {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
   border: 0;
+}
+
+.proscreen-prices {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.proscreen-prices .price-label {
+  margin-top: 8px !important;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.proscreen-prices .price {
+  margin-bottom: 12px;
 }
 /* =========================================
    PRODUCT IMAGE CAROUSEL
@@ -2102,4 +2122,11 @@ textarea::placeholder {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
 }
 
+.highlight-to {
+  display: inline;
+}
 
+.highlight-to::after {
+  content: "";
+  display: block;
+}

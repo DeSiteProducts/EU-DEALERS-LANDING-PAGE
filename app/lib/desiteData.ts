@@ -89,11 +89,11 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Bucket Width",
-        value: "Up to 1.7 meters",
+        value: "Up to 1700 mm",
       },
       {
         label: "Feed Height",
-        value: "1.8 meters",
+        value: "1800 mm",
       },
       {
         label: "Mesh Range",
@@ -178,11 +178,11 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Bucket Width",
-        value: "Up to 2 meters",
+        value: "Up to 2000 mm",
       },
       {
         label: "Feed Height",
-        value: "2.3 meters",
+        value: "2300 mm",
       },
       {
         label: "Mesh Range",
@@ -245,11 +245,11 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Bucket Width",
-        value: "Up to 2 meters",
+        value: "Up to 2000 mm",
       },
       {
         label: "Feed Height",
-        value: "2.3 meters",
+        value: "2300 mm",
       },
       {
         label: "Mesh Range",
@@ -307,11 +307,11 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Bucket Width",
-        value: "Up to 1.6 meters",
+        value: "Up to 1600 mm",
       },
       {
         label: "Feed Height",
-        value: "1.6 meters",
+        value: "1600 mm",
       },
       {
         label: "Mesh Range",
@@ -385,11 +385,11 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Bucket Width",
-        value: "Up to 1.4 meters",
+        value: "Up to 1400 mm",
       },
       {
         label: "Feed Height",
-        value: "1.7 meters",
+        value: "1700 mm",
       },
       {
         label: "Mesh Range",
