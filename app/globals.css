@@ -225,6 +225,43 @@ textarea:focus-visible {
   align-items: center;
 }
 
+#desite-hero-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.05;
+}
+
+
+.hero-copy .hero-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 8px;
+  min-height: 58px;
+  padding: 14px 28px;
+
+  border-radius: 8px;
+  background: #ffffff;
+  color: #30ab33;
+
+  font-size: 1.05rem;
+  font-weight: 900;
+  text-decoration: none;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.hero-copy .hero-contact-button:hover {
+  background: #30ab33;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
 .hero-tagline {
   margin-bottom: 16px;
   color: var(--desite-navy);
@@ -240,9 +277,10 @@ textarea:focus-visible {
   max-width: 100%;
   margin-bottom: 34px;
   color: var(--desite-text);
-  font-size: 1.18rem;
+  font-size: clamp(1.18rem, 2.3vw, 1.5rem);
   font-weight: 600;
 }
+
 
 .hero-actions,
 .contact-actions,

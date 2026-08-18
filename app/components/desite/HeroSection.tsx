@@ -7,12 +7,20 @@ export function HeroSection() {
       <div className="desite-container hero-layout">
         <div className="hero-copy">
           <h2 id="desite-hero-title" className="title">
-            DeSite
+            Be a Dealer
           </h2>
-          <h1 id="desite-hero-title">Mini Screeners</h1>
+          <h1 id="desite-hero-title">DeSite Mini Screeners In Europe</h1>
           <p className="hero-intro">
-            DeSite designs and manufactures the 68 ProScreen Vibratory Sifter and SLG Spring Suspension Grizzly's. Purpose built for mini equipment DeSite’s sifter screeners are Efficient and Affordable for your customers that own mini loaders. DeSite screeners are rugged and come backed with a 5 Year Structure Warranty.
+            DeSite manufactures mini screeners for mini equipment.
+            We offer both 220 Volt Vibratory and Mini Grizzly Screeners
+            Rugged and Affordable, backed with a 5 Year Structure Warranty
           </p>
+           <p className="hero-intro">
+             Be A Dealer for our DeSite Mini Screeners in Europe
+          </p>
+          <a href="#contact" className="hero-contact-button">
+            Contact Us
+          </a>
         </div>
         <ImagePlaceholder
           label="Hero image coming soon"

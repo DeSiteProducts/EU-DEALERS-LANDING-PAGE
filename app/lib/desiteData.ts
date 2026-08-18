@@ -212,11 +212,12 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "Wood Mulch",
-      "Decorative Stone",
-      "Erosion Rock",
-      "Ground Asphalt",
-      "Crushed Concrete"
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
     ],
     features: [
     "Screen and Recycle 15 to 30 cubic meters each hour",
@@ -263,7 +264,12 @@ export const products: DesiteProduct[] = [
     ],
     videos: [],
     materials: [
-      "coming soon"
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
     ],
     features: [
     "Screen and Recycle 10 to 20 cubic meters each hour",
@@ -343,11 +349,12 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "Soils",
-      "Sand",
-      "Gravels",
-      "Compost",
-      "Erosion Rock",
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
     ],
     features: [
     "Screen and Recycle 5 to 10 cubic meters each hour",
@@ -392,7 +399,7 @@ export const products: DesiteProduct[] = [
       },
       {
         label: "Feed Height",
-        value: "1700 mm",
+        value: "1600 mm",
       },
       {
         label: "Mesh Range",
@@ -410,14 +417,20 @@ export const products: DesiteProduct[] = [
       },
     ],
     materials: [
-      "Soils",
-      "Sand",
-      "Gravels",
-      "Compost",
-      "Erosion Rock",
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
     ],
     features: [
-    "coming soon"
+    "Screen and Recycle 5 to 10 cubic meters each hour",
+    "Self Cleaning Spring Suspension System", 
+    "Screen mesh sizes from 3mm to 100mm",
+    "Towable, with removable hitch tube",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 350kg"
   ],
   SuggestedRetailPrice: "2,900",
   CostforStockingDealers: "1,950",
