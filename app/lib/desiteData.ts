@@ -195,8 +195,8 @@ export const products: DesiteProduct[] = [
     ],
     videos: [
       {
-        id: "1129896297",
-        title: "SLG 78 Spring Loaded Grizzly Screening Dirt",
+        id: "1218096081",
+        title: "SLG 78 Spring Loaded Grizzly",
       },
       {
         id: "1001990400",
