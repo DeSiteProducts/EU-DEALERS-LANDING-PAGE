@@ -262,7 +262,12 @@ export const products: DesiteProduct[] = [
       },
       
     ],
-    videos: [],
+    videos: [
+      {
+        id: "1219338439",
+        title: "DESITE SLG 78 Without Riser Box",
+      }
+    ],
     materials: [
       "Rocks from Dirt",
       "Composted Materials",
@@ -412,7 +417,7 @@ export const products: DesiteProduct[] = [
     ],
     videos: [
       {
-        id: "1217761495",
+        id: "1219332840",
         title: "DESITE SLG - 48 MINI",
       },
     ],
