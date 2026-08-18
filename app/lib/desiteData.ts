@@ -195,7 +195,7 @@ export const products: DesiteProduct[] = [
     ],
     videos: [
       {
-        id: "1218096081",
+        id: "1219322367",
         title: "SLG 78 Spring Loaded Grizzly",
       },
       {
@@ -332,7 +332,7 @@ export const products: DesiteProduct[] = [
     ],
     videos: [
       {
-        id: "1006286529",
+        id: "1219320439",
         title: "SLG 56 Towable Spring Loaded Grizzly | Overview",
       },
       {
