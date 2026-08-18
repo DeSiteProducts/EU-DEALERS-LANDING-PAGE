@@ -357,7 +357,8 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 350kg"
   ],
-
+  SuggestedRetailPrice: "2,900",
+  CostforStockingDealers: "1,950",
   },
  {
     name: "SLG 48 Mini",
@@ -418,8 +419,10 @@ export const products: DesiteProduct[] = [
     features: [
     "coming soon"
   ],
-
+  SuggestedRetailPrice: "2,900",
+  CostforStockingDealers: "1,950",
   },
+  
 
 ];
 
