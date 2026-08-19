@@ -5,7 +5,7 @@ import { HeroSection } from "./HeroSection";
 import { ProductsSection } from "./ProductsSection";
 
 
-export function LandingPage() {
+export function LandingPage({ showError }: { showError: boolean }) {
   return (
     <>
       <header className="desite-header">
@@ -39,7 +39,7 @@ export function LandingPage() {
       <main >
         <HeroSection />
         <ProductsSection />
-        <ContactSection />
+        <ContactSection showError={showError} />
       </main>
       <Footer />
     </>

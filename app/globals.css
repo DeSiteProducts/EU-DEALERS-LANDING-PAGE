@@ -2179,3 +2179,39 @@ textarea::placeholder {
   content: "";
   display: block;
 }
+
+.form-error {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #d9534f;
+  border-radius: 6px;
+  background: #fff5f5;
+  color: #b52b27;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-thank-you {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.contact-thank-you-content {
+  width: min(700px, 100%);
+  text-align: center;
+}
+
+.contact-thank-you-content h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+}
+
+.contact-thank-you-content p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.6;
+}
