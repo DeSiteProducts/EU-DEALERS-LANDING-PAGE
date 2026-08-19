@@ -27,7 +27,7 @@ export function ContactSection({
             </p>
             <p>
               <strong>Email</strong>
-              XXX
+              bhidm@outlook.com
             </p>
             
           </div>
