@@ -19,20 +19,17 @@ export function ContactSection() {
             </p>
             <p>
               <strong>Phone / WhatsApp</strong>
-              XXX-XXX-XXXX
+              +1(509)264-1129
             </p>
             <p>
               <strong>Email</strong>
               XXX
             </p>
-            <p>
-              <strong>Website</strong>
-              XXX
-            </p>
+            
           </div>
           <div className="contact-actions">
             <PrimaryButton href="#desite-contact-form">Contact Brad</PrimaryButton>
-            <SecondaryButton href="https://wa.me/1XXXXXXXXXX">
+            <SecondaryButton href="https://wa.me/15092641129">
               Message on WhatsApp
             </SecondaryButton>
           </div>

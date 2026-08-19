@@ -9,10 +9,10 @@ export function HeroSection() {
           <h2 id="desite-hero-title" className="title">
             Be a Dealer
           </h2>
-          <h1 id="desite-hero-title1">DeSite Mini Screeners In Europe</h1>
+          
           <p className="hero-intro">
-            DeSite manufactures mini screeners for mini equipment.
-            We offer both 220 Volt Vibratory and Mini Grizzly Screeners
+            DeSite manufactures mini screeners for mini equipment.<br></br>
+            We offer both 220 Volt Vibratory and Mini Grizzly Screeners<br></br>
             Rugged and Affordable, backed with a 5 Year Structure Warranty
           </p>
            <p className="hero-introb">

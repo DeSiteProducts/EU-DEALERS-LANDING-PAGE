@@ -226,7 +226,7 @@ textarea:focus-visible {
 }
 
 #desite-hero-title {
-  font-size: clamp(2.6rem, 5vw, 3.4rem);
+  font-size: clamp(3rem, 5.5vw, 4rem);
   line-height: 1.05;
 }
 
@@ -288,7 +288,7 @@ textarea:focus-visible {
   max-width: 100%;
   margin-bottom: 34px;
   color: var(--desite-text);
-  font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+  font-size: clamp(1.6rem, 3vw, 2rem);
   font-weight: 800;
 }
 
