@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "ac_m3RaMCVz-JEeX3OuNK8liLoEPfLmOSt4-AyO7NQw",
+  },
   title: "DeSite Products | Compact Portable Vibratory Screeners",
   description:
     "Explore DeSite Products compact portable vibratory screeners, built for contractors, landscapers and material producers across North America.",
