@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
+const gaId = "G-6QFTHC9PX3";
 export const metadata: Metadata = {
   verification: {
     google: "ac_m3RaMCVz-JEeX3OuNK8liLoEPfLmOSt4-AyO7NQw",
@@ -41,7 +43,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', '${gaId}');
+          `}
+        </Script>
+
+        {children}
+      </body>
     </html>
   );
 }
