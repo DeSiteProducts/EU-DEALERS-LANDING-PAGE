@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --desite-navy: #2674F0;
-  --desite-blue: #2674F0;
+  --desite-navy: #0B3D91;
+  --desite-blue: #0B3D91;
   --desite-white: #ffffff;
   --desite-bg: #f6f9ff;
   --desite-text: #171717;
   --desite-ink: #050505;
-  --desite-border: rgba(38, 116, 240, 0.24);
+  --desite-border: rgba(11, 61, 145, 0.24);
   --desite-soft-blue: #e9f1ff;
-  --desite-shadow: 0 18px 44px rgba(38, 116, 240, 0.18);
-  --desite-shadow-strong: 0 24px 64px rgba(38, 116, 240, 0.3);
+  --desite-shadow: 0 18px 44px rgba(11, 61, 145, 0.18);
+  --desite-shadow-strong: 0 24px 64px rgba(11, 61, 145, 0.3);
 }
 
 @theme inline {
@@ -112,7 +112,7 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 40;
-  border-bottom: 1px solid rgba(38, 116, 240, 0.28);
+  border-bottom: 1px solid rgba(11, 61, 145, 0.28);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
 }
@@ -185,21 +185,21 @@ h3 {
 .play-button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 4px solid rgba(38, 116, 240, 0.82);
+  outline: 4px solid rgba(11, 61, 145, 0.82);
   outline-offset: 4px;
 }
 
 .nav-contact {
   background: var(--desite-navy);
   color: var(--desite-ink);
-  box-shadow: 0 10px 24px rgba(38, 116, 240, 0.32);
+  box-shadow: 0 10px 24px rgba(11, 61, 145, 0.32);
 }
 
 .nav-contact:hover,
 .desite-button-primary:hover,
 .carousel-button:hover,
 .play-button:hover {
-  background: #2674F0;
+  background: #0B3D91;
 }
 
 .mobile-nav {
@@ -207,7 +207,7 @@ textarea:focus-visible {
 }
 
 .desite-hero {
-  background: #2674F0;
+  background: #0B3D91;
   padding: 90px 0 78px;
 }
 
@@ -246,7 +246,7 @@ textarea:focus-visible {
 
   border-radius: 8px;
   background: #ffffff;
-  color: #2674F0;
+  color: #0B3D91;
 
   font-size: clamp(1.3rem, 2.5vw, 1.65rem);
   font-weight: 900;
@@ -260,7 +260,7 @@ textarea:focus-visible {
 }
 
 .hero-copy .hero-contact-button:hover {
-  background: #2674F0;
+  background: #0B3D91;
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
@@ -332,7 +332,7 @@ textarea:focus-visible {
 }
 
 .desite-button-primary:hover {
-  box-shadow: 0 14px 28px rgba(38, 116, 240, 0.36);
+  box-shadow: 0 14px 28px rgba(11, 61, 145, 0.36);
 }
 
 .desite-button-secondary {
@@ -343,7 +343,7 @@ textarea:focus-visible {
 
 .desite-button-secondary:hover {
   background: var(--desite-soft-blue);
-  border-color: #2674F0;
+  border-color: #0B3D91;
 }
 
 .desite-button-disabled {
@@ -381,11 +381,11 @@ textarea:focus-visible {
   justify-content: center;
   gap: 14px;
   overflow: hidden;
-  border: 1px solid rgba(38, 116, 240, 0.28);
+  border: 1px solid rgba(11, 61, 145, 0.28);
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(233, 241, 255, 0.92)),
-    radial-gradient(circle at top right, rgba(38, 116, 240, 0.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(11, 61, 145, 0.18), transparent 34%),
     var(--desite-bg);
   padding: 30px;
   color: var(--desite-navy);
@@ -402,9 +402,9 @@ textarea:focus-visible {
   position: relative;
   min-height: 260px;
   overflow: hidden;
-  border: 1px solid rgba(38, 116, 240, 0.22);
+  border: 1px solid rgba(11, 61, 145, 0.22);
   border-radius: 8px;
-  background: #2674F0;
+  background: #0B3D91;
   box-shadow: var(--desite-shadow);
 }
 
@@ -541,7 +541,7 @@ textarea:focus-visible {
 }
 
 .difference-card:hover {
-  border-color: rgba(38, 116, 240, 0.7);
+  border-color: rgba(11, 61, 145, 0.7);
   box-shadow: var(--desite-shadow-strong);
 }
 
@@ -563,10 +563,10 @@ textarea:focus-visible {
   width: 82px;
   min-height: 82px;
   margin: 0 auto 20px;
-  border: 1px solid rgba(38, 116, 240, 0.34);
+  border: 1px solid rgba(11, 61, 145, 0.34);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(38, 116, 240, 0.26), rgba(255, 255, 255, 0.92)),
+    linear-gradient(135deg, rgba(11, 61, 145, 0.26), rgba(255, 255, 255, 0.92)),
     var(--desite-soft-blue);
 }
 
@@ -646,7 +646,7 @@ textarea:focus-visible {
   background:
     radial-gradient(circle at 16% 0%, rgba(255, 255, 255, 0.34), transparent 34%),
     radial-gradient(circle at 94% 12%, rgba(0, 0, 0, 0.22), transparent 28%),
-    linear-gradient(to bottom, #2674F0 0%, #082F72 100%);
+    linear-gradient(to bottom, #0B3D91 0%, #082F72 100%);
   color: #ffffff;
   box-shadow: 0 26px 70px rgba(8, 47, 114, 0.34);
 }
@@ -850,7 +850,7 @@ textarea:focus-visible {
   border-color: rgba(255, 255, 255, 0.44);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.24), rgba(0, 0, 0, 0.12)),
-    rgba(38, 116, 240, 0.7);
+    rgba(11, 61, 145, 0.7);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
 }
 
@@ -932,9 +932,9 @@ textarea:focus-visible {
 }
 
 .proscreen-highlights div {
-  border: 1px solid rgba(38, 116, 240, 0.22);
+  border: 1px solid rgba(11, 61, 145, 0.22);
   border-radius: 8px;
-  background: #2674F0;
+  background: #0B3D91;
   padding: 14px 16px;
 }
 
@@ -971,7 +971,7 @@ textarea:focus-visible {
   align-items: baseline;
   justify-content: center;
   gap: 10px;
-  border: 2px solid rgba(38, 116, 240, 0.34);
+  border: 2px solid rgba(11, 61, 145, 0.34);
   border-radius: 8px;
   background:
     linear-gradient(135deg, #ffffff, var(--desite-soft-blue));
@@ -982,7 +982,7 @@ textarea:focus-visible {
   line-height: 0.95;
   letter-spacing: -0.045em;
   text-align: center;
-  box-shadow: 0 16px 34px rgba(38, 116, 240, 0.24);
+  box-shadow: 0 16px 34px rgba(11, 61, 145, 0.24);
 }
 
 .proscreen-card .price-retail {
@@ -1029,10 +1029,10 @@ textarea:focus-visible {
   position: relative;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  border: 1px solid rgba(38, 116, 240, 0.22);
+  border: 1px solid rgba(11, 61, 145, 0.22);
   border-radius: 8px;
   background: var(--desite-bg);
-  box-shadow: 0 14px 30px rgba(38, 116, 240, 0.26);
+  box-shadow: 0 14px 30px rgba(11, 61, 145, 0.26);
 }
 
 .proscreen-video-frame iframe {
@@ -1096,7 +1096,7 @@ textarea:focus-visible {
   height: 9px;
   border-radius: 999px;
   background: var(--desite-blue);
-  box-shadow: 0 0 0 4px rgba(38, 116, 240, 0.2);
+  box-shadow: 0 0 0 4px rgba(11, 61, 145, 0.2);
 }
 
 .product-carousel,
@@ -1107,7 +1107,7 @@ textarea:focus-visible {
 
 .product-card .product-carousel {
   padding: 22px;
-  background: #2674F0;
+  background: #0B3D91;
 }
 
 .carousel-caption {
@@ -1180,11 +1180,11 @@ textarea:focus-visible {
   background: white !important;
 }
 .carousel-button span:hover{
-  color: #2674F0 !important;
+  color: #0B3D91 !important;
 };
 
 .play-button:hover {
-  box-shadow: 0 12px 26px rgba(38, 116, 240, 0.36);
+  box-shadow: 0 12px 26px rgba(11, 61, 145, 0.36);
 }
 
 .carousel-button span {
@@ -1318,7 +1318,7 @@ textarea:focus-visible {
   min-height: 48px;
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(38, 116, 240, 0.22);
+  border: 1px solid rgba(11, 61, 145, 0.22);
   border-radius: 8px;
   background: var(--desite-bg);
   padding: 10px 14px;
@@ -1330,7 +1330,7 @@ textarea:focus-visible {
   position: relative;
   min-height: 430px;
   overflow: hidden;
-  border: 1px solid rgba(38, 116, 240, 0.28);
+  border: 1px solid rgba(11, 61, 145, 0.28);
   border-radius: 8px;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(233, 241, 255, 0.96)),
@@ -1350,13 +1350,13 @@ textarea:focus-visible {
 
 .dealer-map-grid {
   fill: none;
-  stroke: rgba(38, 116, 240, 0.1);
+  stroke: rgba(11, 61, 145, 0.1);
   stroke-width: 2;
 }
 
 .dealer-map-land {
-  fill: rgba(38, 116, 240, 0.12);
-  stroke: rgba(38, 116, 240, 0.22);
+  fill: rgba(11, 61, 145, 0.12);
+  stroke: rgba(11, 61, 145, 0.22);
   stroke-width: 2;
 }
 
@@ -1374,8 +1374,8 @@ textarea:focus-visible {
   border-radius: 999px;
   background: var(--desite-blue);
   box-shadow:
-    0 0 0 7px rgba(38, 116, 240, 0.24),
-    0 12px 24px rgba(38, 116, 240, 0.36);
+    0 0 0 7px rgba(11, 61, 145, 0.24),
+    0 12px 24px rgba(11, 61, 145, 0.36);
   cursor: pointer;
   transition:
     background-color 160ms ease,
@@ -1397,8 +1397,8 @@ textarea:focus-visible {
 .dealer-marker-active {
   background: var(--desite-white);
   box-shadow:
-    0 0 0 8px rgba(38, 116, 240, 0.36),
-    0 16px 30px rgba(38, 116, 240, 0.44);
+    0 0 0 8px rgba(11, 61, 145, 0.36),
+    0 16px 30px rgba(11, 61, 145, 0.44);
   transform: translate(-50%, -50%) scale(1.08);
 }
 
@@ -1407,7 +1407,7 @@ textarea:focus-visible {
   z-index: 2;
   max-width: min(280px, calc(100% - 32px));
   transform: translate(-50%, calc(-100% - 28px));
-  border: 1px solid rgba(38, 116, 240, 0.22);
+  border: 1px solid rgba(11, 61, 145, 0.22);
   border-radius: 8px;
   background: var(--desite-white);
   padding: 12px 14px;
@@ -1476,11 +1476,11 @@ textarea:focus-visible {
 }
 
 .desite-form {
-  border: 1px solid rgba(38, 116, 240, 0.28);
+  border: 1px solid rgba(11, 61, 145, 0.28);
   border-radius: 8px;
   background: var(--desite-white);
   padding: 34px;
-  box-shadow: 0 22px 52px rgba(38, 116, 240, 0.28);
+  box-shadow: 0 22px 52px rgba(11, 61, 145, 0.28);
 }
 
 .form-grid {
@@ -1517,7 +1517,7 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: var(--desite-navy);
-  box-shadow: 0 0 0 4px rgba(38, 116, 240, 0.22);
+  box-shadow: 0 0 0 4px rgba(11, 61, 145, 0.22);
 }
 
 textarea {
@@ -1871,7 +1871,7 @@ textarea::placeholder {
     display: inline-flex;
     align-items: center;
     border-radius: 8px;
-    background: rgba(38, 116, 240, 0.1);
+    background: rgba(11, 61, 145, 0.1);
     padding: 8px 10px;
   }
 }
