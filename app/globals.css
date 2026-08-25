@@ -195,6 +195,187 @@ textarea:focus-visible {
   box-shadow: 0 10px 24px rgba(11, 61, 145, 0.32);
 }
 
+
+/* =========================================
+   HEADER ACTIONS - DESKTOP
+   ========================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Mobile menu oculto en desktop */
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE HEADER
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .nav-shell {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* =======================================
+     1. LOGO
+     ======================================= */
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  /* =======================================
+     Ocultar navegación desktop
+     ======================================= */
+
+  .desktop-nav {
+    display: none;
+  }
+
+
+  /* =======================================
+     Ocultar acciones desktop
+     ======================================= */
+
+  .header-actions {
+    display: none;
+  }
+
+
+  /* =======================================
+     2. MENU
+     ======================================= */
+
+  .mobile-nav {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .mobile-nav summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 42px;
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    list-style: none;
+  }
+
+  .mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+
+  /* =======================================
+     MENU ABIERTO
+     ======================================= */
+
+  .mobile-nav[open] nav {
+    display: flex;
+  }
+
+  .mobile-nav nav {
+    display: none;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 8px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.2);
+
+    z-index: 1001;
+  }
+
+  .mobile-nav nav a {
+    display: block;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    color: #082f72;
+
+    text-decoration: none;
+
+    font-size: 14px;
+  }
+
+  .mobile-nav nav a:hover {
+    background: #f1f5f9;
+  }
+
+
+  /* =======================================
+     3. LANGUAGE SELECTOR
+     ======================================= */
+
+  .nav-shell::after {
+    content: "";
+  }
+
+
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .header-actions .language-selector {
+    display: block;
+    width: 100%;
+  }
+
+  .header-actions .language-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-actions .nav-contact {
+    display: none;
+  }
+}
+
 .nav-contact:hover,
 .desite-button-primary:hover,
 .carousel-button:hover,
@@ -2214,4 +2395,354 @@ textarea::placeholder {
   margin: 0 auto 30px;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
   line-height: 1.6;
+}
+
+
+
+
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* =========================================
+   LANGUAGE SELECTOR
+   ========================================= */
+
+.language-selector {
+  position: relative;
+  z-index: 1000;
+  flex-shrink: 0;
+}
+
+/* Google Translate oculto */
+
+.google-translate-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+.language-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  height: 50px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.language-button:active {
+  transform: scale(0.97);
+}
+
+/* Globo */
+
+.language-globe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  color: #082f72;
+
+  flex-shrink: 0;
+}
+
+.language-globe svg {
+  width: 30px;
+  height: 30px;
+
+  display: block;
+}
+
+/* Bandera actual */
+
+.language-current-flag {
+  width: 40px;
+  height: 34px;
+
+  object-fit: cover;
+
+  border-radius: 2px;
+
+  display: block;
+}
+
+/* Nombre */
+
+.language-current {
+  white-space: nowrap;
+}
+
+/* Flecha */
+
+.language-arrow {
+  display: inline-block;
+
+  font-size: 15px;
+
+  transition: transform 0.2s ease;
+}
+
+.language-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   MENU
+   ========================================= */
+
+.language-menu {
+  position: absolute;
+
+  top: calc(100% + 9px);
+
+  right: 0;
+
+  width: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 7px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2);
+
+  animation: languageMenuIn 0.18s ease;
+}
+
+@keyframes languageMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   OPCIONES
+   ========================================= */
+
+.language-option {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 8px 10px;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #082f72;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease;
+}
+
+.language-option:hover {
+  background: #f1f5f9;
+}
+
+.language-option.active {
+  background: #e8f0ff;
+
+  font-weight: 700;
+}
+
+/* Bandera */
+
+.language-flag {
+  width: 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.language-flag img {
+  width: 31px;
+  height: 25px;
+
+  object-fit: cover;
+
+  border-radius: 2px;
+
+  display: block;
+}
+
+/* Nombre */
+
+.language-name {
+  flex: 1;
+}
+
+/* Check */
+
+.language-check {
+  margin-left: auto;
+
+  color: #082f72;
+
+  font-weight: 800;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+  .language-button {
+    padding: 0 11px;
+
+    gap: 6px;
+
+    font-size: 13px;
+  }
+
+  .language-current-flag {
+    width: 29px;
+    height: 23px;
+  }
+
+  .language-globe {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .language-selector {
+    display: block;
+
+    margin-left: auto;
+  }
+  .language-name{
+    font-size: 20px !important;
+  }
+
+  .language-button {
+    height: 38px;
+
+    padding: 0 10px;
+
+    gap: 5px;
+
+    font-size: 12px;
+  }
+
+  .language-globe {
+    font-size: 16px;
+  }
+
+  .language-current-flag {
+    width: 38px;
+    height: 32px;
+  }
+
+  .language-arrow {
+    font-size: 10px;
+  }
+
+  .language-menu {
+    width: 175px;
+
+    right: 0;
+
+    top: calc(100% + 7px);
+  }
+
+  .language-option {
+    min-height: 38px;
+
+    font-size: 23px;
+  }
+}
+
+/* =========================================
+   MOBILE MUY PEQUEÑO
+   ========================================= */
+
+@media (max-width: 480px) {
+  .language-button {
+    padding: 0 8px;
+  }
+
+  .language-current {
+    display: none;
+  }
+
+  .language-menu {
+    width: 170px;
+  }
 }
