@@ -47,6 +47,90 @@ const languages = [
 
 type Language = (typeof languages)[number];
 
+const LANGUAGE_PREFERENCE_KEY = "desite-language-preference";
+
+type LanguagePreference = {
+    language: Language["code"];
+    country: string | null;
+};
+
+const languageByCountry: Record<string, Language["code"]> = {
+    AR: "es", BO: "es", CL: "es", CO: "es", CR: "es", CU: "es", DO: "es",
+    EC: "es", ES: "es", GQ: "es", GT: "es", HN: "es", MX: "es", NI: "es",
+    PA: "es", PE: "es", PR: "es", PY: "es", SV: "es", UY: "es", VE: "es",
+    BE: "fr", BF: "fr", BI: "fr", BJ: "fr", CA: "fr", CD: "fr", CF: "fr",
+    CG: "fr", CH: "fr", CI: "fr", CM: "fr", DJ: "fr", FR: "fr", GA: "fr",
+    GN: "fr", HT: "fr", KM: "fr", LU: "fr", MA: "fr", MC: "fr", MG: "fr",
+    ML: "fr", NE: "fr", RE: "fr", RW: "fr", SC: "fr", SN: "fr", TD: "fr",
+    TG: "fr", TN: "fr", VU: "fr", WF: "fr", YT: "fr",
+    NL: "nl", SR: "nl",
+    DK: "da", GL: "da",
+    SE: "sv", AX: "sv",
+    FI: "fi",
+    AT: "de", DE: "de", LI: "de",
+};
+
+function getLanguage(code: string | null): Language {
+    return languages.find((language) => language.code === code) ?? languages[0];
+}
+
+function getSavedLanguagePreference(): LanguagePreference | null {
+    try {
+        const value = window.localStorage.getItem(LANGUAGE_PREFERENCE_KEY);
+
+        if (!value) {
+            return null;
+        }
+
+        const preference = JSON.parse(value) as LanguagePreference;
+
+        return languages.some((language) => language.code === preference.language)
+            ? preference
+            : null;
+    } catch {
+        return null;
+    }
+}
+
+async function getVisitorCountry(): Promise<string | null> {
+    // La consulta del navegador refleja la IP de salida actual, incluso si el
+    // usuario cambia de VPN después de que el CDN haya asignado una región.
+    try {
+        const countryResponse = await fetch("https://api.country.is/", {
+            cache: "no-store",
+        });
+        const data = (await countryResponse.json()) as { country?: string };
+        const country = data.country?.trim().toUpperCase();
+
+        if (country && /^[A-Z]{2}$/.test(country)) {
+            return country;
+        }
+    } catch {
+        // Se prueba un segundo proveedor antes de usar el servidor.
+    }
+
+    try {
+        const ipResponse = await fetch("https://ipapi.co/country/", {
+            cache: "no-store",
+        });
+        const country = (await ipResponse.text()).trim().toUpperCase();
+
+        if (/^[A-Z]{2}$/.test(country)) {
+            return country;
+        }
+    } catch {
+        // Se usa la detección del servidor como último respaldo.
+    }
+
+    // Respaldo para bloqueadores, errores de red o límites del proveedor externo.
+    const response = await fetch("/api/visitor-country", {
+        cache: "no-store",
+    });
+    const data = (await response.json()) as { country?: string | null };
+
+    return data.country ?? null;
+}
+
 declare global {
     interface Window {
         googleTranslateElementInit?: () => void;
@@ -61,6 +145,7 @@ export function LanguageSelector() {
         useState<Language>(languages[0]);
 
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const detectedCountryRef = useRef<string | null>(null);
 
 
     useEffect(() => {
@@ -133,6 +218,38 @@ export function LanguageSelector() {
                 if (
                     Date.now() - start >= timeout
                 ) {
+                    resolve(null);
+                    return;
+                }
+
+                setTimeout(check, 100);
+            };
+
+            check();
+        });
+    }
+
+    function waitForGoogleLanguageOption(
+        languageCode: Language["code"],
+        timeout = 10000
+    ): Promise<HTMLSelectElement | null> {
+        return new Promise((resolve) => {
+            const start = Date.now();
+
+            const check = () => {
+                const select = document.querySelector(
+                    ".goog-te-combo"
+                ) as HTMLSelectElement | null;
+                const hasLanguage = Array.from(select?.options ?? []).some(
+                    (option) => option.value === languageCode
+                );
+
+                if (select && hasLanguage) {
+                    resolve(select);
+                    return;
+                }
+
+                if (Date.now() - start >= timeout) {
                     resolve(null);
                     return;
                 }
@@ -285,6 +402,56 @@ export function LanguageSelector() {
             }
 
             await waitForGoogleSelect();
+
+            const savedPreference = getSavedLanguagePreference();
+            let country: string | null = null;
+
+            try {
+                country = await getVisitorCountry();
+                detectedCountryRef.current = country;
+            } catch {
+                country = null;
+            }
+
+            const detectedLanguage = getLanguage(
+                country ? languageByCountry[country] ?? "en" : "en"
+            );
+            const keepManualLanguage = savedPreference && (
+                !country ||
+                savedPreference.country === null ||
+                savedPreference.country === country
+            );
+            const language = keepManualLanguage
+                ? getLanguage(savedPreference.language)
+                : detectedLanguage;
+
+            if (savedPreference && !keepManualLanguage) {
+                window.localStorage.removeItem(LANGUAGE_PREFERENCE_KEY);
+            }
+
+            if (language.code === "en") {
+                setCurrentLanguage(language);
+                return;
+            }
+
+            const select = await waitForGoogleLanguageOption(language.code);
+
+            if (!select || !mounted) {
+                return;
+            }
+
+            // El widget crea el selector antes de registrar completamente el
+            // listener de cambio. Darle un instante evita que el primer cambio
+            // automático se quede solo en el estado visual del selector.
+            await new Promise((resolve) => setTimeout(resolve, 300));
+
+            if (!mounted) {
+                return;
+            }
+
+            select.value = language.code;
+            select.dispatchEvent(new Event("change", { bubbles: true }));
+            setCurrentLanguage(language);
         }
 
         initializeGoogleTranslate();
@@ -325,6 +492,16 @@ export function LanguageSelector() {
     async function changeLanguage(
         language: Language
     ) {
+
+        // La preferencia se mantiene durante la visita desde el mismo país. Si
+        // cambia la IP a otro país, la detección automática vuelve a tener prioridad.
+        window.localStorage.setItem(
+            LANGUAGE_PREFERENCE_KEY,
+            JSON.stringify({
+                language: language.code,
+                country: detectedCountryRef.current,
+            } satisfies LanguagePreference)
+        );
 
         if (language.code === "en") {
             /*
