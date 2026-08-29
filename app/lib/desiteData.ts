@@ -61,6 +61,137 @@ export type DesiteProduct = {
 
 export const products: DesiteProduct[] = [
   {
+    name: "108 Vibratory Screener",
+    detailVariant: "DeSite ProScreen",
+    imageAlt: "DeSite 108 ProScreen screener product photo",
+    images: [
+      "/images/108/1.webp",
+      "/images/108/2.webp",
+      "/images/108/3.webp",
+      "/images/108/4.webp",
+      "/images/108/5.webp",
+      "/images/108/6.webp",
+      "/images/108/108Proinaction1.webp",
+      "/images/108/108Proinaction2.webp",
+      "/images/108/108Proinaction3.webp",
+      "/images/108/108Proinaction4.webp",
+      "/images/108/108Proinaction6.webp",
+      "/images/108/108Proinaction7.webp",
+    ],
+    proscreenHighlights: [
+      {
+        label: "Weight",
+        value: "2495 kg",
+      },
+      {
+        label: "Bucket Width",
+        value: "Up to 2083 mm",
+      },
+      {
+        label: "Feed Height",
+        value: "3099 mm",
+      },
+      {
+        label: "Mesh Range",
+        value: "82 mm to 100 mm",
+      },
+      {
+        label: "Warranty",
+        value: "5 Year Structure Warranty",
+      },
+    ],
+    videos: [
+      {
+        id: "1092573792?h=138d6d872a",
+        title: "108 Homepage",
+      }
+    ],
+    materials: [
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
+    ],
+    features: [
+    "Screen and Recycle 30 to 60 cubic meters each hour",
+    "Vibratory screening using 220 Volt single phase.",
+    "Screen mesh sizes from 82mm to 100mm",
+    "Fork Pockets for easy onsite transport",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 2495kg"
+  ],
+  SuggestedRetailPrice: "",
+  CostforStockingDealers: "",
+
+  },
+   {
+    name: "78 Vibratory Screener",
+    detailVariant: "DeSite ProScreen",
+    imageAlt: "DeSite 78 ProScreen screener product photo",
+    images: [
+      "/images/78/1.webp",
+      "/images/78/2.webp",
+      "/images/78/3.webp",
+      "/images/78/4.webp",
+      "/images/78/5.webp",
+      "/images/78/78Proinaction1.webp",
+      "/images/78/78Proinaction2.webp",
+      "/images/78/78Proinaction3.webp",
+      "/images/78/78Proinaction4.webp",
+      "/images/78/78Proinaction6.webp",
+      "/images/78/78Proinaction7.webp",
+    ],
+    proscreenHighlights: [
+      {
+        label: "Weight",
+        value: "1134 kg",
+      },
+      {
+        label: "Bucket Width",
+        value: "Up to 1828 mm",
+      },
+      {
+        label: "Feed Height",
+        value: "2641 mm",
+      },
+      {
+        label: "Mesh Range",
+        value: "72 mm to 82 mm",
+      },
+      {
+        label: "Warranty",
+        value: "5 Year Structure Warranty",
+      },
+    ],
+    videos: [
+      {
+        id: "1111673557?h=138d6d872a",
+        title: "78 Homepage",
+      }
+    ],
+    materials: [
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
+    ],
+    features: [
+    "Screen and Recycle 19 to 38 cubic meters each hour",
+    "Vibratory screening using 220 Volt single phase.",
+    "Screen mesh sizes from 72mm to 82mm",
+    "Fork Pockets for easy onsite transport",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 1134kg"
+  ],
+  SuggestedRetailPrice: "",
+  CostforStockingDealers: "",
+
+  },
+  {
     name: "68V Vibratory Mini Screener",
     detailVariant: "DeSite ProScreen",
     imageAlt: "DeSite 68 ProScreen screener product photo",
@@ -137,6 +268,64 @@ export const products: DesiteProduct[] = [
   ],
   SuggestedRetailPrice: "5,300",
   CostforStockingDealers: "3,700",
+
+  },
+  {
+    name: "SLG 108 Grizzly",
+    detailVariant: "DeSite Grizzly",
+    imageAlt: "SLG 108 Grizzly screener product photo",
+    images: [
+      "/images/slg108/1.webp",
+      "/images/slg108/2.webp",
+      "/images/slg108/SLG108inaction1.webp",
+      "/images/slg108/SLG108inaction2.webp",
+      "/images/slg108/SLG108inaction3.webp",
+    ],
+    proscreenHighlights: [
+      {
+        label: "Weight",
+        value: "1950 kg",
+      },
+      {
+        label: "Bucket Width",
+        value: "Up to 2083 mm",
+      },
+      {
+        label: "Feed Height",
+        value: "3099 mm",
+      },
+      {
+        label: "Mesh Range",
+        value: "82 mm to 100 mm",
+      },
+      {
+        label: "Warranty",
+        value: "5 Year Structure Warranty",
+      },
+    ],
+    videos: [
+      {
+        id: "1130937806?h=138d6d872a",
+        title: "SLG 108 Homepage",
+      }
+    ],
+    materials: [
+      "Rocks from Dirt",
+      "Composted Materials",
+      "Excavation materials",
+      "Demolition Debris",
+      "Drainage Stone",
+      "Sand Products"
+    ],
+    features: [
+    "Screen and Recycle 30 to 60 cubic meters each hour",
+    "Screen mesh sizes from 82mm to 100mm",
+    "Fork Pockets for easy onsite transport",
+    "Rugged, 5 Year Structure Warranty",
+    "Screener weight 1950kg"
+  ],
+  SuggestedRetailPrice: "",
+  CostforStockingDealers: "",
 
   },
    {
