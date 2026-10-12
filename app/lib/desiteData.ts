@@ -122,7 +122,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 2495kg"
   ],
-  SuggestedRetailPrice: "",
+  SuggestedRetailPrice: "10,500",
   CostforStockingDealers: "",
 
   },
@@ -187,7 +187,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 1134kg"
   ],
-  SuggestedRetailPrice: "",
+  SuggestedRetailPrice: "8,200",
   CostforStockingDealers: "",
 
   },
@@ -266,7 +266,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 700kg"
   ],
-  SuggestedRetailPrice: "5,300",
+  SuggestedRetailPrice: "5,800",
   CostforStockingDealers: "3,700",
 
   },
@@ -414,7 +414,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 725kg"
   ],
-  SuggestedRetailPrice: "5,700",
+  SuggestedRetailPrice: "5,900",
   CostforStockingDealers: "4,000",
 
 
@@ -555,7 +555,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 350kg"
   ],
-  SuggestedRetailPrice: "2,900",
+  SuggestedRetailPrice: "2,250",
   CostforStockingDealers: "1,950",
   },
  {
@@ -623,7 +623,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 350kg"
   ],
-  SuggestedRetailPrice: "2,900",
+  SuggestedRetailPrice: "2,250",
   CostforStockingDealers: "1,950",
   },
   

@@ -33,24 +33,18 @@ function ProScreenProductCard({ product }: { product: DesiteProduct }) {
         {product.SuggestedRetailPrice && (
           <>
             <p className="price-label">
-              <strong>Suggested Retail Price</strong>
+              <strong>Price</strong>
             </p>
             <span className="price price-retail">
               {product.SuggestedRetailPrice} <small>Euros</small>
             </span>
+            <p className="price-text">
+              <strong>Excellent Discounts For Stocking Dealers</strong>
+            </p>
           </>
         )}
 
-        {product.CostforStockingDealers && (
-          <>
-            <p className="price-label">
-              <strong>Cost for Stocking Dealers</strong>
-            </p>
-            <span className="price price-dealer">
-              {product.CostforStockingDealers} <small>Euros</small>
-            </span>
-          </>
-        )}
+        
       </div>
     </div>
         <div className="proscreen-summary">
