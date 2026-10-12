@@ -1,6 +1,10 @@
+import { MetaLeadEvent } from "../components/MetaLeadEvent";
+import Link from "next/link";
+
 export default function ContactThankYouPage() {
   return (
     <main className="contact-thank-you">
+      <MetaLeadEvent />
       <section className="contact-thank-you-content">
         <p className="section-kicker">
           Contact DeSite Products
@@ -14,12 +18,12 @@ export default function ContactThankYouPage() {
           to you as soon as possible.
         </p>
 
-        <a
+        <Link
           href="/#contact"
           className="desite-button desite-button-primary"
         >
           Back to Home
-        </a>
+        </Link>
       </section>
     </main>
   );

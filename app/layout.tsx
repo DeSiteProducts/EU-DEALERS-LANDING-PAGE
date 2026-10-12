@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { MetaPixel } from "./components/MetaPixel";
 
 const gaId = "G-6QFTHC9PX3";
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <MetaPixel />
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}

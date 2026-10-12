@@ -2784,3 +2784,75 @@ textarea::placeholder {
     width: 170px;
   }
 }
+
+/* Quote wizard: blue and white palette shared with the product cards. */
+.quote-form {
+  --quote-accent: #1a56a8;
+  min-width: 0;
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid #d6e2f1;
+  border-radius: 28px;
+  background: #ffffff;
+  color: #050505;
+  box-shadow: 0 24px 60px rgba(22, 72, 137, .1);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.contact-section .quote-form .section-kicker {
+  margin: 0;
+  color: #050505;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.quote-progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.quote-step-count { color: #050505; font-size: .8rem; font-weight: 700; white-space: nowrap; }
+.quote-form progress { appearance: none; display: block; width: 100%; height: 6px; border: 0; border-radius: 99px; overflow: hidden; background: rgba(26, 86, 168, .14); margin-bottom: 32px; }
+.quote-form progress::-webkit-progress-bar { background: rgba(26, 86, 168, .14); border-radius: 99px; }
+.quote-form progress::-webkit-progress-value { background: var(--quote-accent); border-radius: 99px; }
+.quote-form progress::-moz-progress-bar { background: var(--quote-accent); border-radius: 99px; }
+.quote-form h3 { color: #050505; font-size: clamp(1.5rem, 2.2vw, 1.85rem); font-weight: 800; letter-spacing: -.025em; line-height: 1.25; margin: 0 0 16px; }
+.quote-options { border: 0; padding: 0; margin: 0; min-width: 0; }
+.quote-options > p { color: #050505; margin: 0 0 26px; line-height: 1.65; }
+.quote-option { display: flex; align-items: flex-start; gap: 16px; margin: 0 0 12px; border: 1px solid #c8d8eb; border-radius: 16px; padding: 18px 20px; color: #050505; background: #ffffff; font-size: 1rem; font-weight: 600; line-height: 1.45; cursor: pointer; transition: border-color .18s, background .18s; }
+.quote-option:hover { background: #ffffff; border-color: #b7cce5; }
+.quote-option.is-selected { border-color: var(--quote-accent); background: #ffffff; box-shadow: inset 0 0 0 1px var(--quote-accent); }
+.quote-option:focus-within { outline: 2px solid var(--quote-accent); outline-offset: 3px; }
+.quote-option input, .quote-consent input { width: 22px; height: 22px; min-height: 22px; padding: 0; flex: 0 0 22px; margin: 3px 0 0; accent-color: var(--quote-accent); }
+.quote-option input { appearance: none; border: 2px solid #c2d6ef; border-radius: 50%; background: transparent; box-shadow: none; }
+.quote-option input:checked { border-color: var(--quote-accent); background: radial-gradient(circle, #ffffff 0 4px, var(--quote-accent) 4.5px); }
+.quote-option small { display: block; color: #050505; font-size: .875rem; font-weight: 400; margin-top: 5px; }
+.quote-actions { display: flex; gap: 12px; margin-top: 32px; }
+.quote-actions .desite-button { width: auto; min-height: 56px; border: 1px solid #b7cce5; border-radius: 99px; padding: 15px 24px; background: transparent; color: #050505; font-size: 1rem; font-weight: 700; line-height: 1.3; cursor: pointer; box-shadow: none; }
+.quote-actions .desite-button-primary { flex: 1; border: 2px solid var(--quote-accent); background: #ffffff; color: #050505; }
+.quote-actions .desite-button:hover { background: #ffffff; }
+.quote-actions .desite-button-primary:hover { background: #ffffff; box-shadow: 0 0 0 3px rgba(26, 86, 168, .14); }
+.quote-actions button:disabled { opacity: .45; cursor: not-allowed; }
+.quote-form .form-grid { gap: 20px; }
+.quote-form .form-field { min-width: 0; margin-bottom: 20px; }
+.quote-form .form-grid .form-field { margin-bottom: 0; }
+.quote-form .form-grid { margin-bottom: 20px; }
+.quote-field-wide { grid-column: 1 / -1; }
+.quote-form .form-field label { color: #050505; font-size: .75rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 8px; }
+.quote-form .form-field input, .quote-form textarea { min-height: 54px; border: 1px solid #b7cce5; border-radius: 12px; padding: 14px 16px; background: #ffffff; color: #050505; font-size: 16px; color-scheme: light; }
+.quote-form textarea { min-height: 120px; }
+.quote-form .form-field input:focus, .quote-form textarea:focus { outline: 0; border-color: var(--quote-accent); background: #ffffff; box-shadow: 0 0 0 3px rgba(26, 86, 168, .14); }
+.quote-form input:-webkit-autofill { -webkit-text-fill-color: #050505; box-shadow: 0 0 0 1000px #ffffff inset; }
+.quote-consent { display: flex; align-items: flex-start; gap: 14px; margin-top: 24px; padding: 20px; border: 1px solid #d6e2f1; border-radius: 16px; color: #050505; background: #ffffff; font-size: .875rem; font-weight: 400; }
+.quote-note { color: #050505; text-align: center; font-size: .8rem; margin: 18px 0 0; }
+.quote-recommendations { background: #ffffff; border: 1px solid #c8d8eb; border-radius: 14px; padding: 18px; margin-bottom: 28px; color: #050505; font-size: .9rem; }
+.quote-recommendations p { margin: 0; }
+.quote-recommendations ul { list-style: none; padding: 0; margin: 16px 0; }
+.quote-recommendations li { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: space-between; margin-block: 12px; }
+.quote-recommendations strong, .quote-recommendations li span { color: #050505; }
+.quote-recommendations li span { white-space: nowrap; font-weight: 700; }
+.quote-form .form-error { color: #a32121; background: rgba(239, 68, 68, .1); border: 1px solid rgba(239, 68, 68, .4); border-radius: 12px; padding: 14px 16px; margin-top: 20px; }
+.quote-form :is(button, input, textarea):focus-visible { outline: 2px solid var(--quote-accent); outline-offset: 4px; }
+.quote-honeypot, .quote-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 680px) {
+  .quote-form { padding: 24px 20px; border-radius: 22px; }
+  .quote-option { padding: 16px; gap: 12px; }
+  .quote-form .form-grid { grid-template-columns: 1fr; }
+  .quote-actions .desite-button { padding-inline: 20px; }
+  .quote-consent { padding: 16px; }
+}
