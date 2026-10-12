@@ -324,7 +324,7 @@ export const products: DesiteProduct[] = [
     "Rugged, 5 Year Structure Warranty",
     "Screener weight 1950kg"
   ],
-  SuggestedRetailPrice: "",
+  SuggestedRetailPrice: "8,200",
   CostforStockingDealers: "",
 
   },
